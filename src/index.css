@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* src/index.css *//* src/index.css */
+.rendered-html {
+  max-width: 100%;
+  overflow-x: auto;
+  display: inline-block;
+  vertical-align: middle;
+  break-inside: avoid; /* Prevents breaking inside rendered HTML */
+}
+
+.rendered-html * {
+  max-width: 100%;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+.rendered-html img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.rendered-html pre,
+.rendered-html code {
+  background: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: inline;
+  white-space: pre-wrap;
+}
+
+.rendered-html pre {
+  padding: 8px;
+  overflow-x: auto;
+  display: block;
+}
+
+.todo-item .rendered-html {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+/* Optional: Enhance dark mode contrast */
+.dark .rendered-html pre,
+.dark .rendered-html code {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  .rendered-html {
+    font-size: 14px;
+  }
+  .rendered-html pre,
+  .rendered-html code {
+    font-size: 12px;
+  }
+}
